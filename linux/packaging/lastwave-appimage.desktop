@@ -1,0 +1,14 @@
+# NLX_MUSIC-desktop — AppImage desktop entry.
+# Same identity as lastwave.desktop, but Exec is the bare binary name:
+# inside the AppImage the executable lives at $APPDIR/usr/bin and there
+# is no /opt/lastwave (that absolute path belongs to the deb/rpm layout).
+# Used ONLY by the CI AppImage step; see .github/workflows/desktop.yml.
+[Desktop Entry]
+Name=NLX_MUSIC-desktop
+Comment=Desktop music player — YouTube Music, high-quality audio, Last.fm scrobbling
+Exec=lastwave_desktop
+Icon=lastwave
+Terminal=false
+Type=Application
+Categories=Audio;Music;AudioVideo;
+StartupWMClass=lastwave_desktop
